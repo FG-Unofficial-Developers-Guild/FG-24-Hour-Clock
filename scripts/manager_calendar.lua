@@ -4,15 +4,15 @@
 --
 
 local function getDisplayHour()
-	local nHour = DB.getValue("calendar.current.hour", 0);
-	return string.format("%2d", nHour);
+	local nHour = DB.getValue('calendar.current.hour', 0)
+	return string.format('%2d', nHour)
 end
 
 local function getDisplayHourPhase()
-	return "";
+	return ''
 end
 
-local getTimeString_old;
+local getTimeString_old
 local function getTimeString(nHour, nMinute, ...)
 	local sTimeString = getTimeString_old(nHour, nMinute, ...)
 	return StringManager.trim(sTimeString)
